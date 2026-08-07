@@ -137,7 +137,7 @@
 
 <div class="background">
 	<textarea bind:this={area} autofocus class="textarea">
-\ae와 같은 단축키를 사용해서 특수문자를 입력할 수 있습니다.
+\'e와 같은 단축키를 사용해서 특수문자를 입력할 수 있습니다.
 사용할 수 있는 단축키 목록은 다음과 같습니다.
 
 Acute: ', áćéǵíḱĺḿńóṕŕśúẃýź
