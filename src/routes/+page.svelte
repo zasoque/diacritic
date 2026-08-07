@@ -113,8 +113,7 @@
 				}
 
 				setTimeout(() => {
-					area.selectionStart = area.value.length - 1;
-					area.selectionend = area.value.length;
+					area.selectionStart = area.selectionEnd - 1;
 				}, 0);
 			} else if (mode !== MODE_NONE && e.key !== '\\') {
 				const lastChar = e.key.toLowerCase();
@@ -126,7 +125,12 @@
 					if (e.key.toUpperCase() === e.key) {
 						foundOne = foundOne.toUpperCase();
 					}
-					area.value = area.value.slice(0, -1) + foundOne;
+					const selection = area.selectionEnd - 1 + foundOne.length;
+					area.value =
+						area.value.substring(0, area.selectionEnd).slice(0, -1) +
+						foundOne +
+						area.value.substring(area.selectionEnd);
+					area.selectionStart = area.selectionEnd = selection;
 				}
 
 				mode = MODE_NONE;
