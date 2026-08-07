@@ -80,8 +80,17 @@
 					case 'v':
 						mode = MODE_HACEK;
 						break;
+					case '"':
+						mode = MODE_DOUBLE_ACUTE;
+						break;
+					case 'g':
+						mode = MODE_DOUBLE_GRAVE;
+						break;
 					case 'u':
 						mode = MODE_BREVE;
+						break;
+					case 'n':
+						mode = MODE_INVERTED_BREVE;
 						break;
 					case 'r':
 						mode = MODE_RING_ABOVE;
@@ -127,7 +136,28 @@
 </script>
 
 <div class="background">
-	<textarea bind:this={area} autofocus class="textarea" />
+	<textarea bind:this={area} autofocus class="textarea">
+\ae와 같은 단축키를 사용해서 특수문자를 입력할 수 있습니다.
+사용할 수 있는 단축키 목록은 다음과 같습니다.
+
+Acute: ', áćéǵíḱĺḿńóṕŕśúẃýź
+Grave: `, àèìǹòùẁỳ
+Circumflex: ^, âĉêĝĥîĵôŝûŵŷẑ
+Haček: v, ǎčďěǧȟǐǰǩľňǒřšťǔžǯ
+Double Acute: ", őű
+Double Grave: g, ȁȅȉȍȑȕ
+Dot Above: d, ȧḃċḋėḟġḣṁṅȯṗṙṡṫẇẋẏż
+Dot Below: ., ạḅḍẹḥịḳḷṃṇọṛṣṭụṿẉỵẓ
+Diaresis: :, äëïöüÿ
+Breve: u, ăĕğĭŏŭ
+Inverted Breve: n, ȃȇȋȏȓȗ
+Tilde: ~, ãẽĩñõũṽỹ
+Macron: m, āēḡīōūȳ
+Cedilla: ,, çȩļņş
+Ogonek: o, ąęįǫų
+Ring Above: r, åůẘẙ
+Extra: x, æœß
+  </textarea>
 </div>
 
 <style>
