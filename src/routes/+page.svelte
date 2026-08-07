@@ -165,7 +165,7 @@ Extra: x, æœß
 </div>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gowun+Batang&display=swap');
 
 	.background {
 		height: 100vh;
@@ -184,6 +184,6 @@ Extra: x, æœß
 		width: 100%;
 		font-size: 1.2rem;
 		padding: 1rem;
-		font-family: 'EB Garamond', serif;
+		font-family: 'EB Garamond', 'Gowun Batang', serif;
 	}
 </style>
